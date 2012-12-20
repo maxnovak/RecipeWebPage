@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Recipe Book</title>
+	<link rel = "stylesheet" href = "style.css"/>
+	
+	<script type = "text/javascript">
+		
+		function drawImage()
+		{
+			var canv = document.getElementById("myCanvas");
+			var c = canv.getContext("2d");
+			var img = new Image();
+			var w, h;
+			img.onload = function()
+			{
+				h = this.height;
+				w = this.width;
+				
+				canv.width = w;
+				canv.height = h;
+				
+				c.drawImage(img, 0, 0, w, h);
+
+			}
+			
+			img.src = "pie_slice.png";
+		
+		}
+		
+		function start()
+		{
+			var xmlhttp = new XMLHttpRequest();
+			xmlhttp.onreadystatechange = function()
+			{
+				if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
+				{
+					document.getElementById("data").innerHTML = xmlhttp.responseText;
+				}
+			}
+			xmlhttp.open("GET","create.php");
+			xmlhttp.send();
+		
+		}
+		
+		function searchNow()
+		{
+			var xmlhttp = new XMLHttpRequest();
+			var searchingStuff = document.getElementById("searchBar").value;
+			xmlhttp.onreadystatechange = function()
+			{
+				if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
+				{
+					document.getElementById("data").innerHTML = xmlhttp.responseText;
+				}
+			}
+			xmlhttp.open("GET","search.php?searchTerm="+searchingStuff, true);
+			xmlhttp.send();
+		}
+
+		
+	</script>
+	
+</head>
+<body>
+	<div id = "backStyle">
+			<canvas id = "myCanvas">
+				Your browser does not support the canvas element.
+			</canvas>
+			<header id = "topHeader">
+				Max's Recipe Book Compilation
+			</header>
+	</div>
+	<div>
+		<nav id = "navStyle"> 
+			<a href="about.html">About</a> | 
+			<a href="doc.html">Documentation</a> | 
+			<a href="add.php">Add Recipe</a>
+		</nav>
+	</div>
+	<div>
+		<div id = "sBar">
+			<div id = "bar">Search: <input type="text" id = "searchBar" name = "searchTerm" placeholder = "Enter a recipe name to search by"/></div>
+			<button onclick = "searchNow()" id = "searchButton">Search</button>
+		</div>
+	</div>
+	<div id = "data"></div> 
+	<script type="text/javascript">
+		drawImage();
+		start();
+		
+	</script>
+
+
+</body>
+</html>

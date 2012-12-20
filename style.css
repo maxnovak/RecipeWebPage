@@ -1,0 +1,183 @@
+*{
+	font: bold 25px verdana, sans-serif;
+	margin: 5px;
+	background: #FAFA94;
+}
+
+#myCanvas
+{
+	width:20%;
+	height:20%;
+}
+
+#topHeader
+{
+	width:70%;
+	background: #81DF99;
+	float: right;
+	margin-right: auto;
+	margin-left: 0px;
+}
+
+#addHeader
+{
+	background: #81DF99;
+	float: left;
+	border-radius: 4px;
+}
+
+#about
+{
+	background: #81DF99;
+	float: left;
+	
+	border-radius: 4px;
+}
+
+#aboutHeader
+{
+	background: #81DF99;
+	font: bold 10px verdana, sans-serif;
+	border-radius: 4px;
+	float: left;
+	
+}
+
+#aboutText
+{
+	font: 10px verdana, sans-serif;
+	float: left;
+}
+
+#backStyle
+{
+
+	background: #81DF99;
+	border-radius: 10px;
+	width: 100%;
+}
+
+#navStyle
+{
+	font: bold 10px verdana, sans-serif;
+	background: #DD8A0E;
+	border-radius: 5px;
+	border: 2px;
+	
+}
+
+#formStyle
+{
+	font: bold 10px verdana, sans-serif;
+	background: #3EC3E5;
+	float: left;
+	width: 75%;
+	border-radius: 10px;
+	border-color: #16B7DF;
+}
+
+#dataStyle
+{
+	font: 10px verdana, sans-serif;
+	background: #16B7DF;
+	width: 75%;
+	height: 15px;
+	
+}
+
+#searchButton
+{
+	background: #3EC3E5;
+	font: 10px verdana, sans-serif;
+	border-radius: 10px;
+	
+}
+
+#sBar
+{
+	background: #3EC3E5;
+	font: 10px verdana, sans-serif;
+	float: left;
+	width: 100%;
+	border-radius: 10px;
+}
+
+#searchBar
+{
+	background: #3EC3E5;
+	font: 10px verdana, sans-serif;
+	float: left;
+	width: 100%;
+	border-radius: 10px;
+}
+
+#bar
+{
+	background: #3EC3E5;
+	font: 10px verdana, sans-serif;
+	width: 80%;
+}
+
+#submitStyle
+{
+	font: 10px verdana, sans-serif;
+	background: #90E4F9;
+	height: 20px;
+	border-radius: 8px;
+	
+}
+
+#headerText
+{
+	background:inherit;
+	font: inherit;
+	color: #DD8A0E;
+}
+
+#data
+{
+	font: bold 10px verdana, sans-serif;
+	float: left;
+	background: #10841f;
+	border-radius: 10px;
+	width: auto;
+	height: auto;
+	margin: 5px;
+	padding: 8px;
+}
+
+td
+{
+	font: 10px verdana,sans-serif;
+}
+
+th
+{
+	font: bold 10px verdana,sans-serif;
+}
+
+canvas:hover
+{
+	-webkit-transform: rotate(360deg);
+	-moz-transform: rotate(360deg);
+	-webkit-transition: all 8s ease-in-out;
+	-webkit-box-shadow: 0 3px 10px #666; 
+	-moz-box-shadow: 0 3px 10px #666;
+}
+
+canvas
+{
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-webkit-transition: all 8s ease-in-out;
+	-webkit-box-shadow: 0 3px 10px #666; 
+	-moz-box-shadow: 0 3px 10px #666;
+}
+
+
+a
+{
+	font: bold 10px verdana, sans-serif;
+	background: #DD8A0E;
+
+}
